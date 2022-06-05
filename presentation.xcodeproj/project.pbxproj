@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B84ED3FD2849165E005BD790 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84ED3FC2849165E005BD790 /* DetailViewController.swift */; };
 		B86943642839D19D0061BB28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86943632839D19D0061BB28 /* AppDelegate.swift */; };
 		B86943662839D19D0061BB28 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86943652839D19D0061BB28 /* SceneDelegate.swift */; };
 		B86943682839D19D0061BB28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B86943672839D19D0061BB28 /* ViewController.swift */; };
 		B869436B2839D19D0061BB28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B86943692839D19D0061BB28 /* Main.storyboard */; };
 		B869436D2839D1A30061BB28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B869436C2839D1A30061BB28 /* Assets.xcassets */; };
 		B86943702839D1A30061BB28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B869436E2839D1A30061BB28 /* LaunchScreen.storyboard */; };
+		B869437C2839D8330061BB28 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869437B2839D8330061BB28 /* ListTableViewController.swift */; };
+		B869437E2839D99D0061BB28 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869437D2839D99D0061BB28 /* ListTableViewCell.swift */; };
+		B86943802839DC020061BB28 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869437F2839DC020061BB28 /* RecordViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B84ED3FC2849165E005BD790 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		B86943602839D19D0061BB28 /* presentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = presentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B86943632839D19D0061BB28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B86943652839D19D0061BB28 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		B869436C2839D1A30061BB28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B869436F2839D1A30061BB28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B86943712839D1A30061BB28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B869437B2839D8330061BB28 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		B869437D2839D99D0061BB28 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		B869437F2839DC020061BB28 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,10 @@
 				B869436C2839D1A30061BB28 /* Assets.xcassets */,
 				B869436E2839D1A30061BB28 /* LaunchScreen.storyboard */,
 				B86943712839D1A30061BB28 /* Info.plist */,
+				B869437D2839D99D0061BB28 /* ListTableViewCell.swift */,
+				B869437B2839D8330061BB28 /* ListTableViewController.swift */,
+				B869437F2839DC020061BB28 /* RecordViewController.swift */,
+				B84ED3FC2849165E005BD790 /* DetailViewController.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -141,6 +153,10 @@
 				B86943682839D19D0061BB28 /* ViewController.swift in Sources */,
 				B86943642839D19D0061BB28 /* AppDelegate.swift in Sources */,
 				B86943662839D19D0061BB28 /* SceneDelegate.swift in Sources */,
+				B86943802839DC020061BB28 /* RecordViewController.swift in Sources */,
+				B869437C2839D8330061BB28 /* ListTableViewController.swift in Sources */,
+				B869437E2839D99D0061BB28 /* ListTableViewCell.swift in Sources */,
+				B84ED3FD2849165E005BD790 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +306,7 @@
 				DEVELOPMENT_TEAM = 6B7X9487DJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = presentation/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "マイク使用";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -318,6 +335,7 @@
 				DEVELOPMENT_TEAM = 6B7X9487DJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = presentation/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "マイク使用";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
