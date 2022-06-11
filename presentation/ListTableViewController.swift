@@ -46,10 +46,11 @@ class ListTableViewController: UITableViewController{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
                 as! ListTableViewCell
             
+            UserDefaults.standard.string(forKey: "title")
             let date = detailArray[indexPath.row]
             
             cell.titlelabel.text = date[0]
-           
+          
             
             
             return cell
@@ -82,7 +83,7 @@ class ListTableViewController: UITableViewController{
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }
     }
     */
 

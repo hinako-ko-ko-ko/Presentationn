@@ -60,6 +60,8 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
   
     
     @IBAction func saveWord() {
+        UserDefaults.standard.set(tileTextField.text, forKey: "title")
+                                  
             let etext:String  = (tileTextField.text)!
             let jtext:String = (targettimeTextField.text)!
             
