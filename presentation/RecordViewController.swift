@@ -37,7 +37,7 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        detailArray.append([tileTextField.text!,targettimeTextField.text!,textView.text!,timerLabel.text!])
+        
         UserDefaults.standard.set(detailArray, forKey: "detail")
         
         getDate()
@@ -67,6 +67,10 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
             
         
         if !etext.isEmpty && !jtext.isEmpty{
+            detailArray = UserDefaults.standard.object(forKey: "detail") as! [[String]]
+                detailArray.append([tileTextField.text!,targettimeTextField.text!,textView.text!,timerLabel.text!])
+            UserDefaults.standard.set(detailArray,forKey: "detail")//UDに配列保存　あとで詳しく書く
+           
             let alert = UIAlertController(
                 title: "保存完了",
                 message: "登録が完了しました",

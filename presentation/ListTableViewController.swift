@@ -24,7 +24,7 @@ class ListTableViewController: UITableViewController{
     }
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(true)
-            
+        detailArray = UserDefaults.standard.object(forKey: "detail") as! [[String]]
         
             
             tableView.reloadData()
@@ -46,10 +46,10 @@ class ListTableViewController: UITableViewController{
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
                 as! ListTableViewCell
             
-            UserDefaults.standard.string(forKey: "title")
-            let date = detailArray[indexPath.row]
             
-            cell.titlelabel.text = date[0]
+            
+            
+            cell.titlelabel.text = detailArray[indexPath.row][0]
           
             
             
