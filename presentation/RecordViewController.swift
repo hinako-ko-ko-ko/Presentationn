@@ -8,6 +8,55 @@
 import UIKit
 import AVFoundation
 
+enum BorderPosition {
+    case top
+    case left
+    case right
+    case bottom
+}
+
+extension UIView {
+    /// 特定の場所にborderをつける
+    ///
+    /// - Parameters:
+    ///   - width: 線の幅
+    ///   - color: 線の色
+    ///   - position: 上下左右どこにborderをつけるか
+    func addBorder(width: CGFloat, color: UIColor, position: BorderPosition) {
+
+        let border = CALayer()
+
+        switch position {
+        case .top:
+            border.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: width)
+            border.backgroundColor = color.cgColor
+            self.layer.addSublayer(border)
+        case .left:
+            border.frame = CGRect(x: 0, y: 0, width: width, height: self.frame.height)
+            border.backgroundColor = color.cgColor
+            self.layer.addSublayer(border)
+        case .right:
+            print(self.frame.width)
+
+            border.frame = CGRect(x: self.frame.width - width, y: 0, width: width, height: self.frame.height)
+            border.backgroundColor = color.cgColor
+            self.layer.addSublayer(border)
+        case .bottom:
+            border.frame = CGRect(x: 0, y: self.frame.height - width, width: self.frame.width, height: width)
+            border.backgroundColor = color.cgColor
+            self.layer.addSublayer(border)
+        }
+    }
+}
+extension UITextField {
+    func addBorderBottom(height: CGFloat, color: UIColor) {
+        let border = CALayer()
+        border.frame = CGRect(x: 0, y: self.frame.height - height, width: self.frame.width, height: height)
+        border.backgroundColor = color.cgColor
+        self.layer.addSublayer(border)
+    }
+}
+
 class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
 
     @IBOutlet var tileTextField: UITextField!
@@ -38,19 +87,26 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
     override func viewDidLoad() {
         super.viewDidLoad()
         
+     
+        tileTextField.addBorderBottom(height: 0.5, color: UIColor.lightGray)
+        targettimeTextField.addBorderBottom(height: 0.5, color: UIColor.lightGray)
+      
         UserDefaults.standard.set(detailArray, forKey: "detail")
         
         getDate()
         
        }
+    override func viewDidLayoutSubviews() {
+            self.textView.addBorder(width: 0.0, color: UIColor.black, position: .right)
+        self.textView.addBorder(width: 0.5, color: UIColor.lightGray, position: .bottom)
+            self.textView.addBorder(width: 0.0, color: UIColor.black, position: .top)
+            self.textView.addBorder(width: 0.0, color: UIColor.black, position: .left)
+        }
     func getDate(){
         let getArray:[[String]] = UserDefaults.standard.array(forKey: "detail") as![[String]]//引き出し
     
     
-        // 枠のカラー
-                textView.layer.borderColor = UIColor.lightGray.cgColor
-        // 枠の幅
-        textView.layer.borderWidth = 0.5
+       
         
     }
     
@@ -117,8 +173,8 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
         let time = Date.timeIntervalSinceReferenceDate - startTime
         let min = Int(time / 60)
         let sec = Int(time) % 60
-        let msec = Int((time - Double(sec)) * 100.0)
-        self.timerLabel.text = String(format: "%02d:%02d:%02d", min, sec, msec)
+       
+        self.timerLabel.text = String(format: "%02d:%02d", min, sec)
     }
     
     @IBAction func stopButtonAction(_ sender: Any) {
@@ -149,8 +205,8 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
 
             isRecording = true
 
-            label.text = "録音中"
-            recordButton.setTitle("STOP", for: .normal)
+            label.text = "Recording"
+            recordButton.setTitle("⚪︎STOP", for: .normal)
             playButton.isEnabled = false
 
         }else{
@@ -158,8 +214,8 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
             audioRecorder.stop()
             isRecording = false
 
-            label.text = "待機中"
-            recordButton.setTitle("RECORD", for: .normal)
+            label.text = "Waiting"
+            recordButton.setTitle("⚫︎RECORD", for: .normal)
             playButton.isEnabled = true
 
         }
@@ -179,8 +235,8 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
 
             isPlaying = true
 
-            label.text = "再生中"
-            playButton.setTitle("STOP", for: .normal)
+            label.text = "Playing"
+            playButton.setTitle("⚪︎STOP", for: .normal)
             recordButton.isEnabled = false
 
         }else{
@@ -188,8 +244,8 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
             audioPlayer.stop()
             isPlaying = false
 
-            label.text = "待機中"
-            playButton.setTitle("PLAY", for: .normal)
+            label.text = "Waiting"
+            playButton.setTitle("▶︎PLAY", for: .normal)
             recordButton.isEnabled = true
 
         }

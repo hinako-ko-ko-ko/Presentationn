@@ -10,7 +10,7 @@ import UIKit
 class ListTableViewController: UITableViewController{
     var detailArray = [[String]]()//配列
         
-        let saveData = UserDefaults.standard
+       
 
 
     override func viewDidLoad() {
@@ -24,7 +24,7 @@ class ListTableViewController: UITableViewController{
     }
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(true)
-        detailArray = UserDefaults.standard.object(forKey: "detail") as! [[String]]
+        detailArray = UserDefaults.standard.object(forKey: "detail") as! [[String]]//取得
         
             
             tableView.reloadData()
@@ -49,7 +49,7 @@ class ListTableViewController: UITableViewController{
             
             
             
-            cell.titlelabel.text = detailArray[indexPath.row][0]
+            cell.titlelabel.text = detailArray[indexPath.row][0]//表示
           
             
             
