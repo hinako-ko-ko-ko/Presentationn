@@ -91,8 +91,7 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
         tileTextField.addBorderBottom(height: 0.5, color: UIColor.lightGray)
         targettimeTextField.addBorderBottom(height: 0.5, color: UIColor.lightGray)
       
-        UserDefaults.standard.set(detailArray, forKey: "detail")
-        
+      
         getDate()
         
        }
@@ -116,7 +115,7 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
   
     
     @IBAction func saveWord() {
-        UserDefaults.standard.set(tileTextField.text, forKey: "title")
+     
                                   
             let etext:String  = (tileTextField.text)!
             let jtext:String = (targettimeTextField.text)!
