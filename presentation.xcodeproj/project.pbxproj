@@ -15,9 +15,10 @@
 		B869436D2839D1A30061BB28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B869436C2839D1A30061BB28 /* Assets.xcassets */; };
 		B86943702839D1A30061BB28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B869436E2839D1A30061BB28 /* LaunchScreen.storyboard */; };
 		B869437C2839D8330061BB28 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869437B2839D8330061BB28 /* ListTableViewController.swift */; };
-		B869437E2839D99D0061BB28 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869437D2839D99D0061BB28 /* ListTableViewCell.swift */; };
 		B86943802839DC020061BB28 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869437F2839DC020061BB28 /* RecordViewController.swift */; };
 		B89ED47A285570FD00EB147A /* presentation.png in Resources */ = {isa = PBXBuildFile; fileRef = B89ED479285570FC00EB147A /* presentation.png */; };
+		B89ED4852855960100EB147A /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89ED4832855960100EB147A /* ListTableViewCell.swift */; };
+		B89ED4862855960100EB147A /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B89ED4842855960100EB147A /* ListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +32,10 @@
 		B869436F2839D1A30061BB28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B86943712839D1A30061BB28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B869437B2839D8330061BB28 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
-		B869437D2839D99D0061BB28 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		B869437F2839DC020061BB28 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		B89ED479285570FC00EB147A /* presentation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = presentation.png; sourceTree = "<group>"; };
+		B89ED4832855960100EB147A /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		B89ED4842855960100EB147A /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,10 +76,11 @@
 				B869436C2839D1A30061BB28 /* Assets.xcassets */,
 				B869436E2839D1A30061BB28 /* LaunchScreen.storyboard */,
 				B86943712839D1A30061BB28 /* Info.plist */,
-				B869437D2839D99D0061BB28 /* ListTableViewCell.swift */,
 				B869437B2839D8330061BB28 /* ListTableViewController.swift */,
 				B869437F2839DC020061BB28 /* RecordViewController.swift */,
 				B84ED3FC2849165E005BD790 /* DetailViewController.swift */,
+				B89ED4832855960100EB147A /* ListTableViewCell.swift */,
+				B89ED4842855960100EB147A /* ListTableViewCell.xib */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				B869436D2839D1A30061BB28 /* Assets.xcassets in Resources */,
 				B869436B2839D19D0061BB28 /* Main.storyboard in Resources */,
 				B89ED47A285570FD00EB147A /* presentation.png in Resources */,
+				B89ED4862855960100EB147A /* ListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,12 +158,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B89ED4852855960100EB147A /* ListTableViewCell.swift in Sources */,
 				B86943682839D19D0061BB28 /* ViewController.swift in Sources */,
 				B86943642839D19D0061BB28 /* AppDelegate.swift in Sources */,
 				B86943662839D19D0061BB28 /* SceneDelegate.swift in Sources */,
 				B86943802839DC020061BB28 /* RecordViewController.swift in Sources */,
 				B869437C2839D8330061BB28 /* ListTableViewController.swift in Sources */,
-				B869437E2839D99D0061BB28 /* ListTableViewCell.swift in Sources */,
 				B84ED3FD2849165E005BD790 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

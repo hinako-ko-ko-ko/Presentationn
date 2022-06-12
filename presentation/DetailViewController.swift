@@ -8,19 +8,13 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    @IBOutlet var titlelabel: UILabel!
-    var detailArray: [Dictionary<String,String>] = []
-        
-        let saveData = UserDefaults.standard
-
    
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        if saveData.array(forKey: "Detail") != nil {
-            detailArray = saveData.array(forKey: "Detail") as![Dictionary<String,String>]
-        }
-                }
+      
+            }
+        
+                
         // Do any additional setup after loading the view.
     }
 

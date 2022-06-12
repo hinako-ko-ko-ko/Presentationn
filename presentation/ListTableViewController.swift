@@ -15,7 +15,8 @@ class ListTableViewController: UITableViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
+            
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -43,15 +44,10 @@ class ListTableViewController: UITableViewController{
         }
 
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath)
                 as! ListTableViewCell
-            
-            
-            
-            
-            cell.titlelabel.text = detailArray[indexPath.row][0]//表示
+     cell.titlelabel.text = detailArray[indexPath.row][0]//表示
           print(detailArray)
-            
             
             return cell
         }
