@@ -17,6 +17,7 @@
 		B869437C2839D8330061BB28 /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869437B2839D8330061BB28 /* ListTableViewController.swift */; };
 		B869437E2839D99D0061BB28 /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869437D2839D99D0061BB28 /* ListTableViewCell.swift */; };
 		B86943802839DC020061BB28 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869437F2839DC020061BB28 /* RecordViewController.swift */; };
+		B89ED47A285570FD00EB147A /* presentation.png in Resources */ = {isa = PBXBuildFile; fileRef = B89ED479285570FC00EB147A /* presentation.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		B869437B2839D8330061BB28 /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
 		B869437D2839D99D0061BB28 /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		B869437F2839DC020061BB28 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
+		B89ED479285570FC00EB147A /* presentation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = presentation.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		B86943622839D19D0061BB28 /* presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B89ED479285570FC00EB147A /* presentation.png */,
 				B86943632839D19D0061BB28 /* AppDelegate.swift */,
 				B86943652839D19D0061BB28 /* SceneDelegate.swift */,
 				B86943672839D19D0061BB28 /* ViewController.swift */,
@@ -140,6 +143,7 @@
 				B86943702839D1A30061BB28 /* LaunchScreen.storyboard in Resources */,
 				B869436D2839D1A30061BB28 /* Assets.xcassets in Resources */,
 				B869436B2839D19D0061BB28 /* Main.storyboard in Resources */,
+				B89ED47A285570FD00EB147A /* presentation.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

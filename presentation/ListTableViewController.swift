@@ -25,7 +25,7 @@ class ListTableViewController: UITableViewController{
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(true)
         detailArray = UserDefaults.standard.object(forKey: "detail") as! [[String]]//取得
-        
+       
             
             tableView.reloadData()
         }
@@ -50,7 +50,7 @@ class ListTableViewController: UITableViewController{
             
             
             cell.titlelabel.text = detailArray[indexPath.row][0]//表示
-          
+          print(detailArray)
             
             
             return cell

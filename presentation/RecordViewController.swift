@@ -120,6 +120,7 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
                                   
             let etext:String  = (tileTextField.text)!
             let jtext:String = (targettimeTextField.text)!
+        
             
         
         if !etext.isEmpty && !jtext.isEmpty{
@@ -128,8 +129,8 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
             UserDefaults.standard.set(detailArray,forKey: "detail")//UDに配列保存　あとで詳しく書く
            
             let alert = UIAlertController(
-                title: "保存完了",
-                message: "登録が完了しました",
+                title: "SAVE COMPLETED",
+                message: "Registration has been completed",
                 preferredStyle: .alert
             )
             alert.addAction(UIAlertAction(
@@ -145,8 +146,8 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
                 
             } else {
             let nalert = UIAlertController(
-                title: "保存できません",
-                message: "入力してください",
+                title: "CANNOT SAVE",
+                message: "Please enter",
                 preferredStyle: .alert
             )
             nalert.addAction(UIAlertAction(
@@ -206,7 +207,7 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
             isRecording = true
 
             label.text = "Recording"
-            recordButton.setTitle("⚪︎STOP", for: .normal)
+            recordButton.setTitle("⚪︎Stop", for: .normal)
             playButton.isEnabled = false
 
         }else{
@@ -214,8 +215,8 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
             audioRecorder.stop()
             isRecording = false
 
-            label.text = "Waiting"
-            recordButton.setTitle("⚫︎RECORD", for: .normal)
+            label.text = "Stopping"
+            recordButton.setTitle("⚫︎Record", for: .normal)
             playButton.isEnabled = true
 
         }
@@ -236,7 +237,7 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
             isPlaying = true
 
             label.text = "Playing"
-            playButton.setTitle("⚪︎STOP", for: .normal)
+            playButton.setTitle("⚪︎Stop", for: .normal)
             recordButton.isEnabled = false
 
         }else{
@@ -244,8 +245,8 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
             audioPlayer.stop()
             isPlaying = false
 
-            label.text = "Waiting"
-            playButton.setTitle("▶︎PLAY", for: .normal)
+            label.text = "Stopping"
+            playButton.setTitle("▶︎Play", for: .normal)
             recordButton.isEnabled = true
 
         }
