@@ -11,15 +11,15 @@ class ListTableViewController: UITableViewController{
     var detailArray = [[String]]()//配列
         
        
-
+    var indexNum = 0 //セルの番号を記憶しておく変数
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UINib(nibName: "ListTableViewCell", bundle: nil), forCellReuseIdentifier: "customCell")
-            
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
@@ -44,21 +44,44 @@ class ListTableViewController: UITableViewController{
         }
 
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "customCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
                 as! ListTableViewCell
-     cell.titlelabel.text = detailArray[indexPath.row][0]//表示
+            
+            
+            
+            
+            cell.titlelabel.text = detailArray[indexPath.row][0]//表示
+            cell.targettimelabel.text = detailArray[indexPath.row][1]//表示
+            cell.timerlabel.text = detailArray[indexPath.row][3]//表示
+            cell.manuscriptlabel.text = detailArray[indexPath.row][2]//表示
           print(detailArray)
+            
             
             return cell
         }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) //セルをタップしたときに走るコード
+    {
+            
+        tableView.deselectRow(at: indexPath, animated: true)
+            indexNum = indexPath.row //作成しておいた変数にタップした時のセルの番号を代入
+        performSegue(withIdentifier: "showDetailSegue", sender: nil) //segue
+           
+        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "showDetailSegue") {
+            let nextVC: DetailViewController = (segue.destination as? DetailViewController)!//次のビューコントローラーに値を渡すことができる
+            
+            nextVC.num = indexNum //変数に次のビューコントローラーのセグエを代入
+        }
+    }
+}
+    
 
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
         // Configure the cell...
-
         return cell
     }
     */
@@ -86,7 +109,6 @@ class ListTableViewController: UITableViewController{
     /*
     // Override to support rearranging the table view.
     override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
     }
     */
 
@@ -100,7 +122,6 @@ class ListTableViewController: UITableViewController{
 
     /*
     // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
@@ -108,4 +129,6 @@ class ListTableViewController: UITableViewController{
     }
     */
 
-}
+
+
+

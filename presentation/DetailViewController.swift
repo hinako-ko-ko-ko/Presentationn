@@ -8,15 +8,23 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-   
+    
+  
+    
+    @IBOutlet weak var titlelabel: UILabel!
+    var num = Int() //セルをタップしたときにnumという変数の中にindexPathで取得したセルの番号が入っている
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+       
             }
-        
-                
+ 
         // Do any additional setup after loading the view.
+    
     }
+
 
         
     

@@ -18,7 +18,6 @@
 		B86943802839DC020061BB28 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B869437F2839DC020061BB28 /* RecordViewController.swift */; };
 		B89ED47A285570FD00EB147A /* presentation.png in Resources */ = {isa = PBXBuildFile; fileRef = B89ED479285570FC00EB147A /* presentation.png */; };
 		B89ED4852855960100EB147A /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B89ED4832855960100EB147A /* ListTableViewCell.swift */; };
-		B89ED4862855960100EB147A /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B89ED4842855960100EB147A /* ListTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +34,6 @@
 		B869437F2839DC020061BB28 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		B89ED479285570FC00EB147A /* presentation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = presentation.png; sourceTree = "<group>"; };
 		B89ED4832855960100EB147A /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
-		B89ED4842855960100EB147A /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +75,9 @@
 				B869436E2839D1A30061BB28 /* LaunchScreen.storyboard */,
 				B86943712839D1A30061BB28 /* Info.plist */,
 				B869437B2839D8330061BB28 /* ListTableViewController.swift */,
-				B869437F2839DC020061BB28 /* RecordViewController.swift */,
 				B84ED3FC2849165E005BD790 /* DetailViewController.swift */,
 				B89ED4832855960100EB147A /* ListTableViewCell.swift */,
-				B89ED4842855960100EB147A /* ListTableViewCell.xib */,
+				B869437F2839DC020061BB28 /* RecordViewController.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -147,7 +144,6 @@
 				B869436D2839D1A30061BB28 /* Assets.xcassets in Resources */,
 				B869436B2839D19D0061BB28 /* Main.storyboard in Resources */,
 				B89ED47A285570FD00EB147A /* presentation.png in Resources */,
-				B89ED4862855960100EB147A /* ListTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

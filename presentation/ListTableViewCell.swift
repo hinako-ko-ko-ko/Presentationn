@@ -8,14 +8,19 @@
 import UIKit
 
 class ListTableViewCell: UITableViewCell {
-    @IBOutlet var titlelabel: UILabel!
     
+    @IBOutlet var titlelabel: UILabel!
     @IBOutlet var targettimelabel: UILabel!
+    @IBOutlet var timerlabel: UILabel!
+    @IBOutlet var manuscriptlabel: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         
     }
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
