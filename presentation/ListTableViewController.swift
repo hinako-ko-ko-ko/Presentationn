@@ -63,7 +63,7 @@ class ListTableViewController: UITableViewController{
     {
             
         tableView.deselectRow(at: indexPath, animated: true)
-            indexNum = indexPath.row //作成しておいた変数にタップした時のセルの番号を代入
+        indexNum = detailArray[indexPath.row] //作成しておいた変数にタップした時のセルの配列を代入
         performSegue(withIdentifier: "showDetailSegue", sender: nil) //segue
            
         }

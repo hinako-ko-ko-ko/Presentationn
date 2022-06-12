@@ -12,7 +12,7 @@ class DetailViewController: UIViewController {
   
     
     @IBOutlet weak var titlelabel: UILabel!
-    var num = Int() //セルをタップしたときにnumという変数の中にindexPathで取得したセルの番号が入っている
+    var num = Int() //セルをタップしたときにnumという変数の中にindexPathで取得したセルの配列が入っている
     
 
     
