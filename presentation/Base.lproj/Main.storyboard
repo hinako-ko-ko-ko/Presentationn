@@ -247,6 +247,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VWx-bj-PZ4">
+                                <rect key="frame" x="52" y="484" width="302" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdU-Z0-XB3">
+                                <rect key="frame" x="52" y="686" width="302" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cEy-81-tGr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -255,6 +269,9 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" id="lfJ-Fb-fKS"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="manuscriptlabel" destination="YdU-Z0-XB3" id="EKd-al-Avu"/>
+                        <outlet property="targettimelabel" destination="VWx-bj-PZ4" id="IQE-xO-WOo"/>
+                        <outlet property="timerlabel" destination="tsc-be-xdL" id="wWh-jN-1eW"/>
                         <outlet property="titlelabel" destination="Weq-PK-swA" id="aKm-uT-rbN"/>
                     </connections>
                 </viewController>

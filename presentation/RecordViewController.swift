@@ -251,6 +251,3 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
         }
     }
 }
-
-    
-
