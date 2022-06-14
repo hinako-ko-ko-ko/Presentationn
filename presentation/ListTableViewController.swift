@@ -27,19 +27,14 @@ class ListTableViewController: UITableViewController{
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(true)
         
-        if UserDefaults.standard.set(detailArray,forKey: "detail") != nil{
-           
-            
-            
-        
-        
-        detailArray = UserDefaults.standard.object(forKey: "detail") as! [[String]]//取得
-        
+        if let data = UserDefaults.standard.array(forKey: "detail"){
+            detailArray = data as! [[String]]
             tableView.reloadData()
         }
 }
 
     // MARK: - Table view data source
+    
         override func numberOfSections(in tableView: UITableView) -> Int {
             // #warning Incomplete implementation, return the number of sections
             return 1
@@ -53,10 +48,7 @@ class ListTableViewController: UITableViewController{
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
                 as! ListTableViewCell
-            
-            
-            
-            
+    
             cell.titlelabel.text = detailArray[indexPath.row][0]//表示
             cell.targettimelabel.text = detailArray[indexPath.row][1]//表示
             cell.timerlabel.text = detailArray[indexPath.row][3]//表示
@@ -66,6 +58,13 @@ class ListTableViewController: UITableViewController{
             
             return cell
         }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            detailArray.remove(at: indexPath.row)
+            UserDefaults.standard.set(detailArray, forKey: "detail" )
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) //セルをタップしたときに走るコード
     {
             

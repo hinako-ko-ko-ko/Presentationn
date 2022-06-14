@@ -102,10 +102,11 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
             self.textView.addBorder(width: 0.0, color: UIColor.black, position: .left)
         }
     func getDate(){
-        let getArray:[[String]] = UserDefaults.standard.array(forKey: "detail") as![[String]]//引き出し
-    
-    
-       
+        if let getDate = UserDefaults.standard.array(forKey: "detail"){
+            let getArray = getDate as! [[String]]
+        }else{
+            print("nil")
+        }
         
     }
     
@@ -116,17 +117,24 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
     
     @IBAction func saveWord() {
      
-                                  
+  
+        
             let etext:String  = (tileTextField.text)!
             let jtext:String = (targettimeTextField.text)!
+        let mtext:String = (textView.text)!
+        let ttext:String = (timerLabel.text!)
         
             
         
-        if !etext.isEmpty && !jtext.isEmpty{
-            detailArray = UserDefaults.standard.object(forKey: "detail") as! [[String]]
+        if !etext.isEmpty && !jtext.isEmpty && !mtext.isEmpty && !ttext.isEmpty{
+            if let currentArray = UserDefaults.standard.object(forKey: "detail"){
+                detailArray = currentArray as! [[String]]
                 detailArray.append([tileTextField.text!,targettimeTextField.text!,textView.text!,timerLabel.text!])
             UserDefaults.standard.set(detailArray,forKey: "detail")//UDに配列保存　あとで詳しく書く
-           
+            }else{
+                detailArray = [[tileTextField.text!,targettimeTextField.text!,textView.text!,timerLabel.text!]]
+                UserDefaults.standard.set(detailArray, forKey: "detail")
+            }
             let alert = UIAlertController(
                 title: "SAVE COMPLETED",
                 message: "Registration has been completed",
