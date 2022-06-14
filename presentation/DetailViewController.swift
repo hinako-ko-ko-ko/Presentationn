@@ -10,10 +10,10 @@ class DetailViewController: UIViewController {
     
   
     
-    @IBOutlet weak var titlelabel: UILabel!
-    @IBOutlet weak var targettimelabel: UILabel!
-    @IBOutlet weak var timerlabel: UILabel!
-    @IBOutlet weak var manuscriptlabel: UILabel!
+    @IBOutlet var titlelabel: UILabel!
+    @IBOutlet var targettimelabel: UILabel!
+    @IBOutlet var timerlabel: UILabel!
+    @IBOutlet var textView: UITextView!
     
     var num = Int() //セルをタップしたときにnumという変数の中にindexPathで取得したセルの配列が入っている
     

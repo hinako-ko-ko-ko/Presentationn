@@ -23,14 +23,21 @@ class ListTableViewController: UITableViewController{
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
+    
     override func viewWillAppear(_ animated: Bool) {
             super.viewWillAppear(true)
-        detailArray = UserDefaults.standard.object(forKey: "detail") as! [[String]]//取得
-       
+        
+        if UserDefaults.standard.set(detailArray,forKey: "detail") != nil{
+           
             
+            
+        
+        
+        detailArray = UserDefaults.standard.object(forKey: "detail") as! [[String]]//取得
+        
             tableView.reloadData()
         }
-
+}
 
     // MARK: - Table view data source
         override func numberOfSections(in tableView: UITableView) -> Int {
