@@ -121,12 +121,9 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
         
             let etext:String  = (tileTextField.text)!
             let jtext:String = (targettimeTextField.text)!
-        let mtext:String = (textView.text)!
-        let ttext:String = (timerLabel.text!)
+       
         
-            
-        
-        if !etext.isEmpty && !jtext.isEmpty && !mtext.isEmpty && !ttext.isEmpty{
+        if !etext.isEmpty && !jtext.isEmpty{
             if let currentArray = UserDefaults.standard.object(forKey: "detail"){
                 detailArray = currentArray as! [[String]]
                 detailArray.append([tileTextField.text!,targettimeTextField.text!,textView.text!,timerLabel.text!])

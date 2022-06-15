@@ -78,8 +78,15 @@ class ListTableViewController: UITableViewController{
             let nextVC: DetailViewController = (segue.destination as? DetailViewController)!//次のビューコントローラーに値を渡すことができる
             
             nextVC.num = indexNum //変数に次のビューコントローラーのセグエを代入
+            
         }
     }
+    @IBAction func byNavigationPushForOtherStoryboard(_ sender: Any) {
+          let storyboard: UIStoryboard = UIStoryboard(name: "ListViewController", bundle: nil)
+          let nextVC = storyboard.instantiateViewController(withIdentifier: "showDetailSegue") as! DetailViewController
+        nextVC.titlelabel.text = "titlelabel"
+          self.navigationController?.pushViewController(nextVC, animated: true)
+      }
 }
     
 
@@ -134,6 +141,3 @@ class ListTableViewController: UITableViewController{
         // Pass the selected object to the new view controller.
     }
     */
-
-
-

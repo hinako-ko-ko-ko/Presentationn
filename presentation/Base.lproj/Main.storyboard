@@ -333,14 +333,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="MANU SCRIPT" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iNB-Pz-zo9">
-                                <rect key="frame" x="67" y="664" width="240" height="128"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDS-fs-Utt">
+                                <rect key="frame" x="20" y="673" width="334" height="134"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cEy-81-tGr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -350,14 +349,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="targettimelabel" destination="VWx-bj-PZ4" id="IQE-xO-WOo"/>
-                        <outlet property="textView" destination="iNB-Pz-zo9" id="dPW-QI-9uD"/>
+                        <outlet property="textlabel" destination="KDS-fs-Utt" id="oVK-kn-L0I"/>
                         <outlet property="timerlabel" destination="tsc-be-xdL" id="wWh-jN-1eW"/>
                         <outlet property="titlelabel" destination="Weq-PK-swA" id="aKm-uT-rbN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gyo-HE-Sh9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1035" y="-595"/>
+            <point key="canvasLocation" x="1034.7826086956522" y="-595.3125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="eze-Yz-Htr">

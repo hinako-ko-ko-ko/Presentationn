@@ -13,7 +13,7 @@ class DetailViewController: UIViewController {
     @IBOutlet var titlelabel: UILabel!
     @IBOutlet var targettimelabel: UILabel!
     @IBOutlet var timerlabel: UILabel!
-    @IBOutlet var textView: UITextView!
+    @IBOutlet var textlabel: UILabel!
     
     var num = Int() //セルをタップしたときにnumという変数の中にindexPathで取得したセルの配列が入っている
     
