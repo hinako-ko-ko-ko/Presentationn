@@ -9,6 +9,7 @@ import UIKit
 
 class ListTableViewCell: UITableViewCell {
     
+   
     @IBOutlet var titlelabel: UILabel!
     @IBOutlet var targettimelabel: UILabel!
     @IBOutlet var timerlabel: UILabel!

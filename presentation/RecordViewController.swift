@@ -58,6 +58,7 @@ extension UITextField {
 }
 
 class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorderDelegate, AVAudioPlayerDelegate {
+ 
 
     @IBOutlet var tileTextField: UITextField!
     @IBOutlet var targettimeTextField: UITextField!
@@ -123,7 +124,7 @@ class RecordViewController: UIViewController,UITextViewDelegate, AVAudioRecorder
             let jtext:String = (targettimeTextField.text)!
        
         
-        if !etext.isEmpty && !jtext.isEmpty{
+        if !etext.isEmpty && !jtext.isEmpty {
             if let currentArray = UserDefaults.standard.object(forKey: "detail"){
                 detailArray = currentArray as! [[String]]
                 detailArray.append([tileTextField.text!,targettimeTextField.text!,textView.text!,timerLabel.text!])

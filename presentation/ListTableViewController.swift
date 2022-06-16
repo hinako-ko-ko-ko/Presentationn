@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class ListTableViewController: UITableViewController{
     var detailArray = [[String]]()//配列
         
